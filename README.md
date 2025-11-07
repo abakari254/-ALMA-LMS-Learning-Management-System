@@ -32,9 +32,7 @@ Live Demo 👉 [https://ashabakari.eagletechafrica.com/](https://ashabakari.eagl
 
 ---
 
-## ⚙️ Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/abakari254/alma-lms.git
-   cd alma-lms
+## 🤝 Credits
+Developed by **Asha Bakari** in collaboration with **RITA Africa**  
+GitHub: [abakari254](https://github.com/abakari254)  
+Email: [amahia001@outlook.com](mailto:amahia001@outlook.com)
