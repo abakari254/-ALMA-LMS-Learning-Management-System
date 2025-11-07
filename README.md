@@ -33,6 +33,6 @@ Live Demo 👉 [https://ashabakari.eagletechafrica.com/](https://ashabakari.eagl
 ---
 
 ## 🤝 Credits
-Developed by **Asha Bakari** in collaboration with **RITA Africa**  
+Developed by **Asha Bakari** in collaboration with **RITAAFRICA**  
 GitHub: [abakari254](https://github.com/abakari254)  
 Email: [amahia001@outlook.com](mailto:amahia001@outlook.com)
