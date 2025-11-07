@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALMA University - Registration</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>ALMA University</h1>
+    <h2>Create Your Account</h2>
+
+    <!-- Success or Error Message -->
+    <?php
+    session_start();
+    if (isset($_SESSION['message'])) {
+        echo '<div class="alert ' . ($_SESSION['message_type'] ?? 'info') . '">' . $_SESSION['message'] . '</div>';
+        unset($_SESSION['message'], $_SESSION['message_type']);
+    }
+    ?>
+
+    <form action="register.php" method="POST" id="registrationForm" novalidate>
+      <label for="full_name">Full Name</label>
+      <input type="text" id="full_name" name="full_name" required placeholder="Enter your full name">
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required placeholder="Create a password">
+
+      <label for="confirm_password">Confirm Password</label>
+      <input type="password" id="confirm_password" name="confirm_password" required placeholder="Re-enter your password">
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <!-- Hidden honeypot -->
+      <input type="text" name="website" id="website" style="display:none;">
+
+      <button type="submit" id="submitBtn">Register Account</button>
+
+      <p class="login-link">Already registered? <a href="login.php">Login here</a></p>
+    </form>
+  </div>
+
+  <script>
+  // Simple password match check
+  document.getElementById('registrationForm').addEventListener('submit', function(e) {
+      const pass = document.getElementById('password').value;
+      const confirm = document.getElementById('confirm_password').value;
+      if (pass !== confirm) {
+          alert('Passwords do not match!');
+          e.preventDefault();
+      }
+  });
+  </script>
+</body>
+</html>

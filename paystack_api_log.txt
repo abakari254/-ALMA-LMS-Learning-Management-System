@@ -1,0 +1,1 @@
+2025-11-03 04:16:17 - Init OK. Redirecting to Paystack. user_id=55, fee_id=2, amount=10
